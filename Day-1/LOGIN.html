@@ -1,0 +1,498 @@
+ <!DOCTYPE html>
+    <html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>RD-Login/Sign</title>
+        <style>
+
+            /* ************************************************LOGIN********************************************** */
+         
+            #container{
+                display: flex;
+               height: 400px;
+               justify-content: flex-end;
+               align-items: center;
+            }
+            .boxkg{
+                padding-left: 20px;
+                margin-right: 50px;
+                height: 200px;
+                width: 30%;
+                position: relative;
+                justify-content: flex-end;
+                box-shadow: rgba(0, 0, 0, 0.25) 0px 14px 28px, rgba(0, 0, 0, 0.22) 0px 10px 10px;
+            }
+            form{
+                padding: 10px;
+                height: 90%;
+                font-size: 20px;
+            }
+            #email{
+                padding: 10px;
+            }
+            #cont{
+                background: #e42529;
+                color: white;
+                padding: 8px 162px;
+                border-radius: 8px;
+                margin-top: 10px;
+                border-color: white;
+                font-size: 16px;
+            }
+
+            .p1{
+                display: inline-block;
+                position: absolute;
+                bottom: 25px;
+                left: 80px;
+                color: rgb(60, 60, 60);
+                font-weight: bold;
+            }
+            .reg{
+                color: red;
+
+            }
+           
+            /* ********************************************NAV-BAR****************************************** */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+a {
+    text-decoration: none;
+    color: white;
+}
+.red{
+    height: 120px;
+    border: 1px solid red;
+    background-color: #e42529;
+    color: white;
+    position: relative;
+}
+
+.top {
+    
+    display: flex;
+    justify-content: space-evenly;
+    height: 30px;
+}
+
+
+ul {
+    list-style: none;
+    display: flex;
+    align-content: center;
+    gap: 10px;
+    font-weight: 700;
+}
+li {
+    display: flex; 
+    gap: 5px;
+    align-self: baseline;
+}
+ul > li > h2 {
+    padding-top: 0;
+    font-size: 130%;
+    font-weight: 100;
+}
+
+.bottom {
+
+    max-width: 95%;
+    margin: auto;
+    justify-content: space-around;
+    display: flex;
+    align-items: center;
+   
+}
+.search {
+    display: flex;
+    width: 40%;
+    margin-left: 120px;
+    margin-right: 20px;
+}
+
+.bottom > .search > input {
+    width: 73%;
+    height: 45px;
+    font-size: 18px;
+    padding-inline: 18px;
+    border-radius: 5px;
+}
+.search-item{
+    border: none;
+    background-color: #1f4985;
+    color: white;
+    text-align: center;
+    font-size: 18px;
+    width: 25%;
+    border-radius: 5px;
+}
+.cart-login {
+    height: 35px;
+     color: white;
+     display: flex;
+     margin-left: 100px;
+     padding: 20px 5px;
+     align-items: center;
+}
+nav {
+    height: 50px;
+    background-color: #1f4985;
+   
+}
+.nav-content {
+    max-width: 100%;
+    margin-inline: auto;
+    color: white;
+    height: 100%;
+    display: flex;
+    justify-content: space-evenly;
+}
+.nav-option {
+    height: 100%;
+    display: flex;
+    padding: 14px 8px 15px 8px;
+    gap: 10px;
+    margin-top: 0px;
+    font-weight: light;
+}
+.bottom>img{
+    width: 80px;
+}
+
+/* ************************************************************FOOTER************************************************* */
+
+#fcontainer{
+        height: 500px;
+        width: 100%;
+        background-color: #1f4985;
+        margin: auto;
+        display: flex;
+        position: relative;
+        
+    }
+    .box1{
+        height: 430px; 
+        width: 25%;
+        color: white;
+    }
+    .box1 > p {
+        margin-top: 20px;
+        font-size: 16px;
+        margin-left: 35px;
+    }
+    .box1 > h3 {
+        margin-top: 20px;
+        font-size: 20px;
+        margin-left: 35px;
+    }
+    .box2{
+        height: 300px; 
+        width: 25%;
+        color: white;
+    }
+    .box2 > h3 {
+        margin-top: 20px;
+        font-size: 20px;
+        margin-left: 35px;
+    }
+    .box2 > p {
+        margin-top: 20px;
+        font-size: 16px;
+        margin-left: 35px;
+    }
+    .box3{
+        height: 300px; 
+        width: 25%;
+        color: white;
+    }
+
+    .box3 > h3 {
+        margin-top: 20px;
+        font-size: 20px;
+        margin-left: 35px;
+    }
+    .box3 > p {
+        margin-top: 20px;
+        font-size: 16px;
+        margin-left: 35px;
+    }
+    .box4{
+        height: 430px; 
+        width: 25%;
+        color: white;
+    }
+
+    .box4 > h3 {
+        margin-top: 20px;
+        font-size: 20px;
+        margin-left: 35px;
+    }
+    .box4 > p {
+        margin-top: 20px;
+        font-size: 16px;
+        margin-left: 35px;
+    }
+
+    .box5 > img{
+        height: 38px;
+        background-color: #1f4985;
+        margin-bottom: 90px;
+        margin-left: 35px;
+        border-radius: 5px;
+    
+    }
+   
+    .box5{
+        width: 25%;
+        position: absolute;
+        bottom: 50px;
+        left: 350px;
+        bottom: -15%;
+        color: white;
+    }
+
+    .box5 > img {
+        margin-top: 20px;
+        width: 38%;
+        height: 40%;
+        margin-left: 0px;
+        margin-inline: 5px;
+    }
+    hr {
+        margin-top: 15px;
+        border: 0.01px solid;
+    }
+    .box6{
+        height: 80px;
+        width: 100%;
+        border: none;
+        border: 1px solid #0a244a;
+        background-color: #0a244a;
+        margin-top: none;
+    }
+    .box6>p{
+        margin-top: 15px;
+        color: white;
+        text-align: center;
+    }
+
+        </style>
+    </head>
+    <body>
+       <!-- ********************************************NAV-BAR****************************************** -->
+        <div class="red">
+            <div class="top">
+                       <h4>OUR BRAND PROMISE</h4>
+                  
+                        <h4>EASY RETURN</h4>
+                   
+                        <h4>NEXT DAY DELIVERY</h4>
+                    
+                        <h4>SERVICE GUARANTEE</h4>
+                   
+                        <h4>UNMATCHED NETWORK</h4>
+                   
+                        <h4>Find a store</h4>
+                    
+                        <h4>Contact us</h4>
+             </div>
+            <div class="bottom">
+                <img src="./logo.PNG" alt="logo"></a>
+                <h1>D-CART</h1>
+                <div class="search">
+                    <input type="text" placeholder="Find your favorite Digital-products">
+                    <button class="search-item">🔍</button>
+                </div>
+                <div class="cart-login">
+                   <ul>
+                       <li>
+                         <a href="/cart.html"><i></i></a>
+                           <a href="/cart.html"><h4>Cart</h4></a>
+                       </li>
+                       <li>
+                           <h1>|</h1>
+                       </li>
+                       <li> 
+                           <a href="#"><i></i></a>
+                           <a href="/login.html"><h4>Login</h4></a>
+                       </li>
+                   </ul>
+                </div>
+               </div>
+           </div>
+           <nav>
+               <ul class="nav-content">
+                   <li>
+                       <a href="#">
+                       <div class="nav-option" >
+                          <p>MOBILES & TABLETS &nbsp;˅</p>
+                       </div>
+                   </a>
+                   </li>
+                   <li>
+                       <a href="#">
+                       <div class="nav-option">
+                           <p>TELEVISIONS&nbsp;˅</p>
+                           
+                        </div>
+                       </a>
+                   </li>
+                   <li>
+                       <a href="#">
+                       <div class="nav-option">
+                           <p>AUDIO&nbsp;˅</p>
+                          
+                        </div>
+                       </a>
+                   </li>
+                   <li>
+                       <a href="#">
+                       <div class="nav-option">
+                           <p>HOME APPLIANCES&nbsp;˅</p>
+                         
+                        </div>
+                       </a>
+                   </li>
+                   <li>
+                       <a href="#">
+                       <div class="nav-option">
+                           <p>COMPUTERS&nbsp;˅</p>
+                       
+                        </div>
+                       </a>
+                   </li>
+                   <li>
+                       <a href="#">
+                       <div class="nav-option">
+                           <p>KITCHEN APPLIANCES&nbsp;˅</p>
+                      
+                        </div>
+                       </a>
+                   </li>
+                   <li>
+                       <a href="#">
+                       <div class="nav-option">
+                           <p>PERSONAL CARE&nbsp;˅</p>
+                           
+                        </div>
+                       </a>
+                   </li> 
+                   <li>
+                       <a href="#">
+                       <div class="nav-option">
+                           <p>ACCESSORIES &nbsp;˅</p>
+                        </div>
+                       </a>
+                   </li>
+               </ul>
+           </nav>   
+   
+        <!-- ************************************************LOGIN******************************************* -->
+   
+           </div> 
+        <div id="container">
+            
+            <div class="boxkg"> 
+                <div>
+                <h1>Login / Register</h1>
+                </div>
+                <div >
+                    <form>
+                        <input id="email" type="email"name = "email" size="50"
+                        placeholder="Enter your email" aria-required="false" border-radius="5px" height="50px"/>
+                        <input type="submit" value="PROCEED" id="cont" size="60" />
+                    </form>
+                    <p class="p1">
+                        NEW HAPPY CUSTOMER? &nbsp;&nbsp;<a href="register.html"><span class="reg" >REGISTER</span>
+                    </p>
+                </div>
+            </div> 
+        </div>  
+        
+        
+            <!-- ********************************************FOOTER********************************************** -->
+
+
+            
+    <div id="fcontainer">
+        <div class="box1">
+            <h3>PRODUCT CATEGORIES</h3>
+              <p>Smartphones</p> 
+              <p>Laptops</p>
+              <p>DSLR Cameras</p>
+               <p>Televisions</p>
+               <p>Air Conditioners</p>
+               <p>Refrigerators</p>
+               <p>Kitchen Appliances</p>
+               <p>Accessories</p>
+               <p>Personal Care & Grooming</p>
+               <h3>FOLLOW US</h3>   
+        </div>
+       <div class="box2">
+           <h3>SITE INFO</h3>
+           <p>About Reliance Digital</p>
+           <p>resQ Services</p>
+           <p>Site Map</p>
+           <p>Gift Cards</p>
+           <p>Corporate Enquires</p>
+           <p>Contact Us</p>
+       </div>
+       <div class="box3">
+           <h3>RESOURCE CENTRE</h3>
+           <p>Product Reviews</p>
+           <p>Buying Guides</p>
+           <p>How Tos</p>
+           <p>Featured Stories</p>
+           <p>Events & Happenings</p>
+           <p>Nearest Store</p>
+       </div>
+       <div class="box4">
+           <h3>POLICIES</h3>
+           <p>Terms of use</p>
+           <p>FAQs</p>
+           <p>Cancellations & Returns</p>
+           <p>Pricing and Payments policy</p>
+           <p>Shipping and Delivery Policy</p>
+           <p>Privacy policy</p>
+           <p>E-waste Recycling Policy</p>
+           <p>EMI and Additional Cashback T&C</p>
+           <p>RelianceOne Loyalty Program T&C</p>
+           <p>Caution Notice</p>
+       </div> 
+       <div class="box5">
+           <h3>EXPERIENCE RELIANCE DIGITAL APP ON MOBILE</h3>
+           <img src="https://www.reliancedigital.in/build/client/images/google_play_store.png" alt="">
+           <img src="https://www.reliancedigital.in/build/client/images/ios_app_store_icon.png" alt="">
+       </div>
+    
+    </div>
+    <div class="box6">
+       <hr/>
+       <p>© 2023 Reliance Digital. All Rights Reserved.</p>
+    </div>      
+    </body>
+    </html>
+<!-- *************************************************JS************************************************** -->
+
+    <script>
+        document.querySelector("form").addEventListener("submit",myFunction)
+    function myFunction(){
+        event.preventDefault();
+        var logArr = JSON.parse(localStorage.getItem("allUsers")) || []
+    var userEmail=document.querySelector("#email").value;
+    for(let i=0;i<logArr.length;i++){
+        var email=logArr[i].email
+        if(email==userEmail){
+            window.location.href="index.html"
+            return;
+        }
+    }
+    alert("Your Account is NOT Register!!");
+    }
+    </script>
