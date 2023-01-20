@@ -1,0 +1,566 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>RD-Cart</title>
+    <style>
+
+
+/* ******************************************************(((1)))********************************************** */
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+a {
+    text-decoration: none;
+    color: white;
+}
+
+.red {
+    border: 5px solid #e42529;
+    height: 125px;
+    background-color: #e42529;
+    color: white;
+    position: relative;
+}
+
+.top {
+  
+    width: 100%;
+    height: 30px;
+    color:  white;
+    display: flex;
+    align-items: center;
+    position: absolute;
+    right: 0px;
+    justify-content: space-around;
+}
+
+ul {
+    list-style: none;
+    display: flex;
+    align-content: center;
+    gap: 10px;
+    font-weight: 700;
+}
+li {
+    display: flex; 
+    gap: 5px;
+    align-self: baseline;
+}
+
+
+.bottom {
+    max-width: 95%;
+    margin: auto;
+    margin-top: 40px;
+    display: flex;
+    align-items: center;
+    justify-content: space-around;
+}
+
+.search {
+    display: flex;
+    width: 40%;
+    margin-left: 120px;
+    margin-right: 20px;
+}
+
+.bottom > .search > input {
+    width: 73%;
+    height: 45px;
+    font-size: 18px;
+    padding-inline: 18px;
+}
+.search-item{
+    border: none;
+    background-color: #1f4985;
+    color: white;
+    text-align: center;
+    font-size: 18px;
+    width: 25%;
+}
+.bottom>img{
+    width: 80px;
+    border-radius: 10px;
+}
+nav {
+    height: 50px;
+    background-color: #1f4985;
+   
+}
+.nav-content {
+    max-width: 100%;
+    margin-inline: auto;
+    color: white;
+    height: 100%;
+    display: flex;
+    justify-content: space-evenly;
+    padding-inline: 8px;
+}
+.nav-option {
+    height: 100%;
+    display: flex;
+    padding: 14px 8px 15px 8px;
+    gap: 10px;
+    margin-top: 0px;
+    font-weight: light;
+}
+
+nav > li > p {
+    color: white;
+}
+.nav-option:hover {
+    background-color: #e42529;
+}
+
+/* ********************************************************(((2)))**************************************************** */
+   .check{
+    width: 100%;
+    height: 470px;
+    display: flex;
+    margin: auto;
+    
+   }
+      #cart-container{
+        width: 100%;
+        display: grid;
+        grid-template-columns:20% 20% 20% 20% ;
+        grid-gap: 20px;
+        height: 450px;
+        margin-top: 15px;
+      justify-content: center;
+      
+      }
+      #cart-container>div{
+       width: 100%;
+        box-shadow: rgba(0, 0, 0, 0.16) 0px 1px 4px, rgb(51, 51, 51) 0px 0px 0px 3px;
+        padding: 10px;
+        border-radius: 10px;
+        text-align: center;
+        height: 425px;
+      }
+      #cart-container>div>img{
+        height: 250px;
+        width: 100%;
+
+      }
+      #cart-container>div>button{
+         background-color: #0a244a;
+         color: white;
+         padding: 5px;
+         border: none;
+         border-radius: 3px;
+         margin: 10px;
+
+      }
+      hr{
+        position: relative;
+        top: 20px;
+        border: none;
+        height: 5px;
+        background: black;
+        margin-bottom: 50px;
+      }
+      #total{
+        padding-top: 30px;
+        width: 20%;
+        height: 250px;
+        justify-content: flex-end;
+        margin: auto;
+        box-shadow: rgba(0, 0, 0, 0.3) 0px 19px 38px, rgba(0, 0, 0, 0.22) 0px 15px 12px;
+        margin-bottom: 30px;
+        text-align: center;
+      }
+    #total button{
+      background-color: #0a244a;
+      color: white;
+      height: 30px;
+      width: 40%;
+      border-radius: 10px;
+    }
+
+
+    /* *****************************************************(((3)))************************************************* */
+
+    #fcontainer{
+        height: 500px;
+        width: 100%;
+        background-color: #1f4985;
+        margin: auto;
+        display: flex;
+        position: relative;
+        margin-top: 50px;
+    }
+    .box1{
+        height: 430px; 
+        width: 25%;
+        color: white;
+    }
+    .box1 > p {
+        margin-top: 20px;
+        font-size: 16px;
+        margin-left: 35px;
+    }
+    .box1 > h3 {
+        margin-top: 20px;
+        font-size: 20px;
+        margin-left: 35px;
+    }
+    .box2{
+        height: 300px; 
+        width: 25%;
+        color: white;
+    }
+    .box2 > h3 {
+        margin-top: 20px;
+        font-size: 20px;
+        margin-left: 35px;
+    }
+    .box2 > p {
+        margin-top: 20px;
+        font-size: 16px;
+        margin-left: 35px;
+    }
+    .box3{
+        height: 300px; 
+        width: 25%;
+        color: white;
+    }
+
+    .box3 > h3 {
+        margin-top: 20px;
+        font-size: 20px;
+        margin-left: 35px;
+    }
+    .box3 > p {
+        margin-top: 20px;
+        font-size: 16px;
+        margin-left: 35px;
+    }
+    .box4{
+        height: 430px; 
+        width: 25%;
+        color: white;
+    }
+
+    .box4 > h3 {
+        margin-top: 20px;
+        font-size: 20px;
+        margin-left: 35px;
+    }
+    .box4 > p {
+        margin-top: 20px;
+        font-size: 16px;
+        margin-left: 35px;
+    }
+
+    .box5 > img{
+        height: 38px;
+        background-color: #1f4985;
+        margin-bottom: 90px;
+        margin-left: 35px;
+        border-radius: 5px;
+    
+    }
+   
+    .box5{
+        width: 25%;
+        position: absolute;
+        bottom: 50px;
+        left: 350px;
+        bottom: -15%;
+        color: white;
+    }
+
+    .box5 > img {
+        margin-top: 20px;
+        width: 38%;
+        height: 40%;
+        margin-left: 0px;
+        margin-inline: 5px;
+    }
+    hr {
+        margin-top: 15px;
+        border: 0.01px solid;
+        
+    }
+    .box6{
+        height: 80px;
+        width: 100%;
+        border: none;
+        border: 1px solid #0a244a;
+        background-color: #0a244a;
+        margin-top: none;
+    }
+    .box6>p{
+        margin-top: 15px;
+        color: white;
+        text-align: center;
+    }
+
+    </style>
+  </head>
+  <body>
+
+    
+  <!-- **************************************************(((1)))************************************************ -->
+
+  <div class="red">
+    <div class="top">
+               <h4>OUR BRAND PROMISE</h4>
+          
+                <h4>EASY RETURN</h4>
+           
+                <h4>NEXT DAY DELIVERY</h4>
+            
+                <h4>SERVICE GUARANTEE</h4>
+           
+                <h4>UNMATCHED NETWORK</h4>
+           
+                <h4>Find a store</h4>
+            
+                <h4>Contact us</h4>
+     </div>
+    <div class="bottom">
+        <img src="./logo.PNG" alt="logo"></a>
+        <h1>D-CART</h1>
+        <div class="search">
+            <input type="text" placeholder="Find your favorite Digital-products">
+            <button class="search-item">🔍</button>
+        </div>
+        <div class="cart-login">
+           <ul>
+               <li>
+                 <a href="./index.html"><i></i></a>
+                   <a href="./index.html"><h4>Home</h4></a>
+               </li>
+               <li>
+                   <h1>|</h1>
+               </li>
+               <li> 
+                   <a href="#"><i></i></a>
+                   <a href="/login.html"><h4>Login</h4></a>
+               </li>
+           </ul>
+        </div>
+       </div>
+   </div>
+   <nav>
+       <ul class="nav-content">
+           <li>
+               <a href="#">
+               <div class="nav-option" >
+                  <p>MOBILES & TABLETS &nbsp;˅</p>
+               </div>
+           </a>
+           </li>
+           <li>
+               <a href="#">
+               <div class="nav-option">
+                   <p>TELEVISIONS&nbsp;˅</p>
+                   
+                </div>
+               </a>
+           </li>
+           <li>
+               <a href="#">
+               <div class="nav-option">
+                   <p>AUDIO&nbsp;˅</p>
+                  
+                </div>
+               </a>
+           </li>
+           <li>
+               <a href="#">
+               <div class="nav-option">
+                   <p>HOME APPLIANCES&nbsp;˅</p>
+                 
+                </div>
+               </a>
+           </li>
+           <li>
+               <a href="#">
+               <div class="nav-option">
+                   <p>COMPUTERS&nbsp;˅</p>
+               
+                </div>
+               </a>
+           </li>
+           <li>
+               <a href="#">
+               <div class="nav-option">
+                   <p>KITCHEN APPLIANCES&nbsp;˅</p>
+              
+                </div>
+               </a>
+           </li>
+           <li>
+               <a href="#">
+               <div class="nav-option">
+                   <p>PERSONAL CARE&nbsp;˅</p>
+                   
+                </div>
+               </a>
+           </li> 
+           <li>
+               <a href="#">
+               <div class="nav-option">
+                   <p>ACCESSORIES &nbsp;˅</p>
+                </div>
+               </a>
+           </li>
+       </ul>
+   </nav>   
+   
+<!-- ***************************************************(((2)))******************************************************* -->
+   
+<div class="check">
+    <div id="cart-container">  
+    </div>
+   </div>
+   <div id="total">
+    
+    <h4>
+      CGST - 9%
+    </h4>
+    <h4>
+      SGST - 9%
+    </h4>
+    <h4>
+      Delivery Charges - FREE
+    </h4>
+    <h4>
+      Coupon Applied - 18%- FLAT_OFF
+    </h4>
+    <h1>--------------------</h1>
+    <h2>
+      Total - <span id="cart-total">0</span>
+   </h2>
+   <br>
+   <a href="checkout.html"><button>CHECKOUT</button></a>
+   </div>
+ 
+   <!-- ******************************************************(((3)))********************************************* -->
+
+   <div id="fcontainer">
+    <div class="box1">
+        <h3>PRODUCT CATEGORIES</h3>
+          <p>Smartphones</p> 
+          <p>Laptops</p>
+          <p>DSLR Cameras</p>
+           <p>Televisions</p>
+           <p>Air Conditioners</p>
+           <p>Refrigerators</p>
+           <p>Kitchen Appliances</p>
+           <p>Accessories</p>
+           <p>Personal Care & Grooming</p>
+           <h3>FOLLOW US</h3>   
+    </div>
+   <div class="box2">
+       <h3>SITE INFO</h3>
+       <p>About Reliance Digital</p>
+       <p>resQ Services</p>
+       <p>Site Map</p>
+       <p>Gift Cards</p>
+       <p>Corporate Enquires</p>
+       <p>Contact Us</p>
+   </div>
+   <div class="box3">
+       <h3>RESOURCE CENTRE</h3>
+       <p>Product Reviews</p>
+       <p>Buying Guides</p>
+       <p>How Tos</p>
+       <p>Featured Stories</p>
+       <p>Events & Happenings</p>
+       <p>Nearest Store</p>
+   </div>
+   <div class="box4">
+       <h3>POLICIES</h3>
+       <p>Terms of use</p>
+       <p>FAQs</p>
+       <p>Cancellations & Returns</p>
+       <p>Pricing and Payments policy</p>
+       <p>Shipping and Delivery Policy</p>
+       <p>Privacy policy</p>
+       <p>E-waste Recycling Policy</p>
+       <p>EMI and Additional Cashback T&C</p>
+       <p>RelianceOne Loyalty Program T&C</p>
+       <p>Caution Notice</p>
+   </div> 
+   <div class="box5">
+       <h3>EXPERIENCE RELIANCE DIGITAL APP ON MOBILE</h3>
+       <img src="https://www.reliancedigital.in/build/client/images/google_play_store.png" alt="">
+       <img src="https://www.reliancedigital.in/build/client/images/ios_app_store_icon.png" alt="">
+   </div>
+
+</div>
+<div class="box6">
+   <hr/>
+   <p>© 2023 Reliance Digital. All Rights Reserved.</p>
+</div>      
+
+  </body>
+  <script>
+    let Cart = JSON.parse(localStorage.getItem("cart"))||[];
+    let Container = document.getElementById("cart-container");
+    function DisplayProduct(data) {
+      let total=document.getElementById("cart-total")
+      Container.innerHTML = "";
+      Cart.forEach((product) => {
+        let card = document.createElement("div");
+        let image = document.createElement("img");
+        let brand = document.createElement("h2");
+        let category = document.createElement("h4");
+        let details = document.createElement("p");
+        let quantity = document.createElement("span");
+        let price = document.createElement("h3");
+        let Remove = document.createElement("button");
+        let Increment = document.createElement("button");
+        let Decrement = document.createElement("button");
+        quantity.textContent=product.quantity
+        Remove.textContent = "Remove";
+        Increment.textContent="+"
+        Decrement.textContent="-"
+        image.src = product.img;
+        brand.textContent = product.brand;
+        category.textContent = product.category;
+        price.textContent = `₹${product.price}`;
+        details.textContent = product.details;
+        Remove.addEventListener("click", () => {
+            Cart=Cart.filter((ele)=>{
+              return ele.id!==product.id
+            })
+            localStorage.setItem("cart",JSON.stringify(Cart))
+            DisplayProduct()
+        });
+        Increment.addEventListener("click", () => {
+          product=product.quantity++
+          localStorage.setItem("cart",JSON.stringify(Cart))
+          DisplayProduct()
+        });
+        Decrement.addEventListener("click", () => {
+          if(product.quantity>1){
+            product=product.quantity--
+          localStorage.setItem("cart",JSON.stringify(Cart))
+          DisplayProduct()
+          }
+        });
+        card.append(image, brand, price, details, category, Increment,quantity,Decrement,Remove);
+        Container.append(card);
+      });
+
+      let sum=0
+      for(let i=0;i<Cart.length;i++){
+        sum+=Cart[i].price*Cart[i].quantity
+      }
+   total.textContent=sum
+
+    }
+    DisplayProduct()
+  </script>
+</html>
